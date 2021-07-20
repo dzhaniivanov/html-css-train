@@ -15,6 +15,12 @@ body > h2 {
 .layout {
   padding: 1em;
 }
+.layout .container {
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 0.3em;
+  margin-bottom: 3em;
+}
 .layout .header,
 .layout .footer,
 .layout .content,
@@ -65,8 +71,20 @@ body > h2 {
 }
 .lt-basic-content {
   flex: 1 1 600px;
-  margin-right: 1em;
+}
+.lt-basic-content-sb2 {
+  flex: 1 1 500px;
 }
 .lt-basic-sidebar {
   flex: 1 1 300px;
+}
+.lt-basic-sidebar-primary {
+  flex: 1 1 200px;
+}
+.lt-basic-sidebar-secondary {
+  flex: 1 1 100px;
+}
+.lt-basic-sidebar-secondary,
+.sidebar-left .lt-basic-sidebar {
+  order: -1;
 }
