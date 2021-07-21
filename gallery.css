@@ -49,6 +49,9 @@ body {
 .cards input:checked + .card .card-cnt {
   display: block;
   opacity: 1;
+  padding: 0 0 0.7em 4.5em;
+  right: -5em;
+  transform: rotate(0deg);
 }
 .card .card-inner {
   display: flex;
@@ -60,6 +63,7 @@ body {
   background-size: cover;
   background-position: center;
   background-image: var(--card-bgrd);
+  position: relative;
 }
 
 .card svg {
@@ -79,17 +83,22 @@ body {
 }
 .card-cnt {
   flex: 1 0 auto;
-  position: relative;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  transition-delay: 0.4s;
+  position: absolute;
   text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  transform: rotate(-90deg) translate(4.2em, 3.5em);
+  transform-origin: bottom left;
+  transition: transform 0.3 ease-in;
+  opacity: 0.5;
 }
 .card-cnt span {
+  width: 100%;
+  white-space: nowrap;
   display: block;
-  position: absolute;
-  bottom: 5px;
-  left: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card-title {
   font-weight: bold;
