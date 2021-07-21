@@ -12,8 +12,82 @@ body {
   padding: 2em;
   box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.1);
 }
+.panel h2 {
+  margin-bottom: 1rem;
+}
+.cards {
+  display: flex;
+  gap: 1em;
+  position: relative;
+}
+
+.cards input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+  display: block;
+  background: #666;
+  border-radius: 6em;
+  box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.2);
+}
+.cards input:checked + .card {
+  flex-grow: 1;
+  border-radius: 2.4em;
+}
+.cards input:checked + .card .card-cnt {
+  display: block;
+}
+.card .card-inner {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+  min-height: 300px;
+  align-items: flex-end;
+}
 
 .card svg {
   width: 1.5em;
   height: auto;
+}
+
+.card-icon {
+  width: 3em;
+  height: 3em;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 3em;
+  border-radius: 50%;
+}
+.card-cnt {
+  flex: 1 0 auto;
+  padding-left: 1em;
+  display: none;
+}
+.card-cnt span {
+  display: block;
+}
+.card-title {
+  font-weight: Bold;
+}
+
+.card:nth-of-type(1) .card-icon {
+  color: red;
+}
+.card:nth-of-type(2) .card-icon {
+  color: orange;
+}
+.card:nth-of-type(3) .card-icon {
+  color: magenta;
+}
+.card:nth-of-type(4) .card-icon {
+  color: green;
+}
+.card:nth-of-type(5) .card-icon {
+  color: yellow;
 }
